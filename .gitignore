@@ -6,3 +6,5 @@ pom.xml.next
 release.properties
 *.iml
 *.log
+VERSION
+src/main/java/org/anc/json/compliler/service/Version.java
