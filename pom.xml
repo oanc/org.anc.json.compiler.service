@@ -10,8 +10,12 @@
     </parent>
     <groupId>org.anc.json</groupId>
     <artifactId>compiler-service</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
+    <properties>
+        <json.compiler.version>1.0.0</json.compiler.version>
+        <anc.common.version>3.5.0</anc.common.version>
+    </properties>
     <build>
         <finalName>json-compiler</finalName>
         <plugins>
@@ -48,12 +52,12 @@
         <dependency>
             <groupId>org.anc.json</groupId>
             <artifactId>compiler</artifactId>
-            <version>1.0.0</version>
+            <version>${json.compiler.version}</version>
         </dependency>
         <dependency>
             <groupId>org.anc</groupId>
             <artifactId>common</artifactId>
-            <version>3.5.0</version>
+            <version>${anc.common.version}</version>
         </dependency>
     </dependencies>
 </project>
