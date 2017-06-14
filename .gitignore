@@ -7,4 +7,4 @@ release.properties
 *.iml
 *.log
 VERSION
-src/main/java/org/anc/json/compiler/service/Version.java
+src/**/Version.java

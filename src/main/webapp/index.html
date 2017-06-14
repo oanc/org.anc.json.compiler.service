@@ -1,8 +1,52 @@
 <html>
 <head>
     <title>JSON Compiler Service</title>
+    <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-<p>The service is online.</p>
+    <div class="header">
+        <h1>The Language Applications Grid</h1>
+        <h2>An framework for interoperable NLP web services</h2>
+    </div>
+    <div class="content">
+        <p>To use the JSON Compiler Service send a <strong>POST</strong> request containing a schema in the LAPPS Alternative syntaX (LAX) format. See the LAX <a href="https://github.com/oanc/org.anc.json.schema-compiler">GitHub respository</a> for details on the syntax.</p>
+
+        <h2>Headers</h2>
+
+        <p>Please specify the following headers in the <b>POST</b> request:</p>
+        <table>
+            <tr>
+                <th class="first-column">Header</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Content-Type</td>
+                <td>text/plain</td>
+            </tr>
+            <tr>
+                <td>Accept</td>
+                <td>application/json</td>
+            </tr>
+        </table>
+
+        <h2>Example</h2>
+
+        <p>Suppose the file <tt>schema.txt</tt> contains the following</p>
+        <pre>
+            <code>
+ properties {
+     name {
+         type string
+     }
+     age {
+         type integer
+         minimum 0
+     }
+ }
+            </code>
+        </pre>
+        <p class="code">curl -X POST -H "Accept: application/json" -H "Content-type: text/plain" -d @schema.txt http://grid.anc.org:9080/json-compiler</p>
+        <p class="copyright">Copyright &copy; 2017 The Language Applications Grid.</p>
+    </div>
 </body>
 </html>
