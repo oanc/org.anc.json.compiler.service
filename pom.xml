@@ -13,8 +13,10 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <properties>
-        <json.compiler.version>1.0.0</json.compiler.version>
+        <json.compiler.version>1.2.1</json.compiler.version>
         <anc.common.version>3.5.0</anc.common.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
     </properties>
     <build>
         <finalName>json-compiler</finalName>
@@ -22,7 +24,7 @@
             <plugin>
                 <groupId>org.anc.maven.plugins</groupId>
                 <artifactId>anc-maven-plugin</artifactId>
-                <version>1.0.6</version>
+                <version>1.0.7</version>
                 <executions>
                     <execution>
                         <id>versions</id>
